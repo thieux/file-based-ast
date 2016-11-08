@@ -13,8 +13,9 @@ function evaluate() {
   if [[ "$1" = '/tmp/+' ]]; then
     local operands=(```/bin/ls "$1"```)
     local leftTerm="${operands[0]}"
+    local rightTerm="${operands[1]}"
 
-    echo $(($leftTerm + 2))
+    echo $(($leftTerm + $rightTerm))
   else
     basename "$1"
   fi
