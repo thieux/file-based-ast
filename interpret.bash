@@ -10,7 +10,11 @@ function assertEquals() {
 }
 
 function evaluate() {
-  echo '1'
+  if [[ "$1" = '2' ]]; then
+    echo '2'
+  else
+    echo '1'
+  fi
 }
 
 
