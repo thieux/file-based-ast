@@ -2,9 +2,9 @@
 
 function assertEquals() {
   if [[ $1 = $2 ]]; then
-    echo OK
+    echo "test $1 = $2"
   else 
-    echo FAILURE
+    echo "FAILURE: expected=$1; actual=$2"
   fi
 }
 
