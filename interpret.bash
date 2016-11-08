@@ -18,3 +18,8 @@ cd /tmp
 mkdir -p 1
 
 assertEquals '1' "$(evaluate '1')"
+
+mkdir -p 2
+
+assertEquals '2' "$(evaluate '2')"
+
