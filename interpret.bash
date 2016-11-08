@@ -10,14 +10,16 @@ function assertEquals() {
 }
 
 function evaluate() {
-  if [[ "```basename $1```" = '+' ]]; then
+  local name=$(basename "$1")
+
+  if [[ "$name" = '+' ]]; then
     local operands=(```/bin/ls "$1"```)
     local leftTerm="${operands[0]}"
     local rightTerm="${operands[1]}"
 
     echo $(($leftTerm + $rightTerm))
   else
-    basename "$1"
+    echo "$name"
   fi
 }
 
