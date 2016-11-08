@@ -18,6 +18,8 @@ function evaluate() {
     local rightTerm="${operands[1]}"
  
     echo $(($(evaluate "$1/$leftTerm") + $(evaluate "$1/$rightTerm")))
+  elif [[ "$name" = 'x' ]]; then
+    echo '2'
   else
     echo "$name"
   fi
