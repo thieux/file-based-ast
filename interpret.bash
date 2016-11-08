@@ -9,3 +9,7 @@ function assertEquals() {
   fi
 }
 
+cd /tmp
+mkdir -p 1
+
+assertEquals '1' "$(evaluate '1')"
