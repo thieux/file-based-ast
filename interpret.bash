@@ -11,7 +11,8 @@ function assertEquals() {
 
 function evaluate() {
   if [[ "$1" = '/tmp/+' ]]; then
-    local leftTerm="$(echo '1')"
+    local operands=(```/bin/ls "$1"```)
+    local leftTerm="${operands[0]}"
 
     echo $(($leftTerm + 2))
   else
