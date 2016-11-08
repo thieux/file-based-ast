@@ -10,7 +10,7 @@ function assertEquals() {
 }
 
 function evaluate() {
-  if [[ "$1" = '/tmp/+' ]]; then
+  if [[ "```basename $1```" = '+' ]]; then
     local operands=(```/bin/ls "$1"```)
     local leftTerm="${operands[0]}"
     local rightTerm="${operands[1]}"
