@@ -42,3 +42,9 @@ mkdir -p sum/+/2
 mkdir -p sum/+/3
 
 assertEquals '5' "$(evaluate '/tmp/sum/+')"
+
+mkdir -p nested_sum/+/1
+mkdir -p nested_sum/+/+/2
+mkdir -p nested_sum/+/+/3
+
+assertEquals '6' "$(evaluate '/tmp/nested_sum/+')"
