@@ -11,7 +11,7 @@ function assertEquals() {
 
 function evaluate() {
   if [[ "$1" = '/tmp/+' ]]; then
-    echo '3'
+    echo $((1 + 2))
   else
     basename "$1"
   fi
