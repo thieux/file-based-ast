@@ -11,7 +11,9 @@ function assertEquals() {
 
 function evaluate() {
   if [[ "$1" = '/tmp/+' ]]; then
-    echo $(($(echo '1') + 2))
+    local leftTerm="$(echo '1')"
+
+    echo $(($leftTerm + 2))
   else
     basename "$1"
   fi
