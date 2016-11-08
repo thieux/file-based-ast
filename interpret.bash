@@ -9,6 +9,11 @@ function assertEquals() {
   fi
 }
 
+function evaluate() {
+  echo '1'
+}
+
+
 cd /tmp
 mkdir -p 1
 
