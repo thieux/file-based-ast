@@ -35,3 +35,8 @@ mkdir -p +/1
 mkdir -p +/2
 
 assertEquals '3' "$(evaluate '/tmp/+')"
+
+mkdir -p sum/+/2
+mkdir -p sum/+/3
+
+assertEquals '5' "$(evaluate '/tmp/sum/+')"
