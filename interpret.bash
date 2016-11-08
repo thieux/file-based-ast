@@ -1,5 +1,9 @@
 #!/bin/bash
 
-if [[ 1 = 1 ]]; then echo OK; fi
-if [[ 1 != 1 ]]; then echo OK; else echo FAILURE; fi
+function assertEquals() {
+  if [[ $1 = $2 ]]; then echo OK; else echo FAILURE; fi
+}
+
+assertEquals 1 1
+assertEquals 1 2
 
