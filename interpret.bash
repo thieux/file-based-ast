@@ -48,3 +48,8 @@ mkdir -p nested_sum/+/+/2
 mkdir -p nested_sum/+/+/3
 
 assertEquals '6' "$(evaluate '/tmp/nested_sum/+')"
+
+mkdir -p product/x/1
+mkdir -p product/x/2
+
+assertEquals '2' "$(evaluate '/tmp/product/x')"
