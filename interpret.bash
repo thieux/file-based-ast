@@ -23,3 +23,7 @@ mkdir -p 2
 
 assertEquals '2' "$(evaluate '/tmp/2')"
 
+mkdir -p +/1
+mkdir -p +/2
+
+assertEquals '3' "$(evaluate '/tmp/+')"
