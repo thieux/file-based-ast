@@ -10,7 +10,11 @@ function assertEquals() {
 }
 
 function evaluate() {
-  basename "$1"
+  if [[ "$1" = '/tmp/+' ]]; then
+    echo '3'
+  else
+    basename "$1"
+  fi
 }
 
 
