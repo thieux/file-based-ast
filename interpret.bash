@@ -10,7 +10,7 @@ function assertEquals() {
 }
 
 function evaluate() {
-  echo $1
+  basename "$1"
 }
 
 
