@@ -16,8 +16,8 @@ function evaluate() {
     local operands=(```/bin/ls "$1"```)
     local leftTerm="${operands[0]}"
     local rightTerm="${operands[1]}"
-
-    echo $(($leftTerm + $rightTerm))
+ 
+    echo $(($(evaluate "$1/$leftTerm") + $(evaluate "$1/$rightTerm")))
   else
     echo "$name"
   fi
